@@ -29,7 +29,7 @@ model = DeepHistone(use_gpu)
 print('Begin training model...')
 best_model = copy.deepcopy(model)
 best_valid_auPRC=0
-best_valid_loss = np.float('Inf')
+best_valid_loss = float('inf')
 for epoch in range(50):
 	np.random.shuffle(train_index)
 	train_loss= model_train(train_index,model,batchsize,dna_dict,dns_dict,lab_dict,)
