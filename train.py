@@ -5,11 +5,11 @@ from utils import metrics,model_train,model_eval,model_predict
 import torch
 #setting 
 batchsize=20
-data_file = 'data/data.npz'
+data_file = 'data/E003_H3K4me1_deephistone_chr22_expected_format.npz'
 
-model_save_file = 'results/model.txt'
-lab_save_file ='results/label.txt'
-pred_save_file ='results/pred.txt'
+model_save_file = 'results/attempt1_model.txt'
+lab_save_file ='results/attempt1_label.txt'
+pred_save_file ='results/attempt1_pred.txt'
 
 print('Begin loading data...')
 with np.load(data_file) as f:

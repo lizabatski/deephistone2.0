@@ -54,7 +54,7 @@ def convert_to_expected_format(input_file):
     
     # Reshape DNase data
     print(f" Reshaping {n_samples:,} DNase accessibility arrays...")
-    dnase = openness.reshape(n_samples, 1, 1000).astype(np.float32)
+    dnase = openness.reshape(n_samples, 1, 1, 1000).astype(np.float32)
     print(f" DNase reshape complete: {dnase.shape}")
     
     # Create multi-task labels (7 histone markers)
